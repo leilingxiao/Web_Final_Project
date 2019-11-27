@@ -5,6 +5,8 @@ import Todos from './components/Todos';
 import AddTodos from './components/AddTodo';
 import About from './components/pages/About';
 
+
+
 //uuid gives random id
 import uuid from 'uuid';
 
@@ -22,7 +24,7 @@ class App extends Component{
       {
       id: uuid.v4(),
       title :'dinner with family',
-      completed: true
+      completed: false
       },
       {
       id: uuid.v4(),
@@ -67,6 +69,7 @@ addTodo =(title)=>{
 
   render() {
     return (
+      
       <Router>
       <div className="App">
         <div className="container">
