@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+
+
 
 
 const styles = {
@@ -10,7 +12,9 @@ export class About extends React.Component {
         super();
         this.state = {
             opacity: 1,
-            scale: 1
+            scale: 1,
+            slide: false,
+            flip: false
         };
     }
 
@@ -26,6 +30,20 @@ export class About extends React.Component {
         });
     }
 
+    onSlide() {
+        this.setState({
+            slide: true,
+            flip: false
+        });
+    }
+
+    onFlip() {
+        this.setState({
+            flip: true,
+            slide: false
+        });
+    }
+
     
     render() {
         return (
@@ -33,10 +51,8 @@ export class About extends React.Component {
                 <nav>
                     <div className="nav-wrapper orange darken-2">
                         <ul className="left">
-                            <li className="active"><a href="#">TRANSITIONS</a></li>
-                            <li><a href="#">ANIMATIONS</a></li>
-                            <li><a href="#">REACTJS + CSS TRANSITIONS</a></li>
-                            <li><a href="#">REACTJS + CSS ANIMATIONS</a></li>
+                            <div>Animations</div>
+                            
                         </ul>
                     </div>
                 </nav>
@@ -58,6 +74,20 @@ export class About extends React.Component {
                                 <div className="card-action">
                                     <a onClick={this.onHide.bind(this)} style={{cursor: 'pointer'}}>HIDE</a>
                                     <a onClick={this.onScale.bind(this)} style={{cursor: 'pointer'}}>SCALE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="s8 offset-s2 center-align">
+                            <div className={"card deep-purple z-depth-2 " + (this.state.slide ? 'slide' : '') + (this.state.flip ? 'flip' : '')}>
+                                <div className="card-content white-text">
+                                    <span className="card-title">Awesome Animations!</span>
+                                    <p>CSS Animations are pretty cool. But combined with ReactJS ... &lt;3</p>
+                                </div>
+                                <div className="card-action">
+                                    <a onClick={this.onFlip.bind(this)} style={{cursor: 'pointer'}}>FLIP</a>
+                                    <a onClick={this.onSlide.bind(this)} style={{cursor: 'pointer'}}>SLIDE</a>
                                 </div>
                             </div>
                         </div>
