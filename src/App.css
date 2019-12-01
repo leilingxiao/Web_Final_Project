@@ -7,6 +7,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.4;
+  background: linear-gradient(to right, rgb(203,52,181), rgb(68, 166, 187));
 
 }
 
@@ -32,3 +33,7 @@ a {
   background: #666;
 }
 
+#particles-js{
+  background: hotpink;
+  height: 400px;
+}

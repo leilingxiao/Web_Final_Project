@@ -4,6 +4,8 @@ import Header from './components/layout/Header';
 import Todos from './components/Todos';
 import AddTodos from './components/AddTodo';
 import About from './components/pages/About';
+import Contact from './components/pages/Contact';
+import Particles from 'react-particles-js';
 
 
 
@@ -11,6 +13,21 @@ import About from './components/pages/About';
 import uuid from 'uuid';
 
 import './App.css';
+
+
+const  particleOpt = {
+  particles:{
+    number:{
+      value: 150,
+      density:{
+        enbale :true,
+        value_area: 800
+      }
+    }
+  }
+}
+
+
 
 class App extends Component{
   
@@ -69,19 +86,23 @@ addTodo =(title)=>{
 
   render() {
     return (
+     
       
       <Router>
       <div className="App">
+        
         <div className="container">
           <Header />
           <Route exact path="/" render={props =>(
             <React.Fragment>
+              
               <AddTodos addTodo={this.addTodo}/>
               <Todos todos ={this.state.todos} markComplete={this.markComplete} delTodo={this.delTodo}/>
             </React.Fragment>
           )} />
 
           <Route path="/about" component={About}/>
+          <Route path="/contact" component={Contact}/>
           
         </div>
         

@@ -48,10 +48,11 @@ export class About extends React.Component {
     render() {
         return (
             <div>
+                
                 <nav>
                     <div className="nav-wrapper orange darken-2">
                         <ul className="left">
-                            <div>Animations</div>
+                            <div>About us</div>
                             
                         </ul>
                     </div>
@@ -68,8 +69,9 @@ export class About extends React.Component {
                             <div className="card deep-purple z-depth-2"
                                  style={{...styles, opacity: this.state.opacity, transform: 'scale(' + this.state.scale + ')'}}>
                                 <div className="card-content white-text">
-                                    <span className="card-title">Awesome Animations!</span>
-                                    <p>CSS Animations are pretty cool. But combined with ReactJS ... &lt;3</p>
+                                    <span className="card-title">Lingxiao Lei</span>
+                                    <p>Boston ... </p><br/>
+                                    <p>Student...</p>
                                 </div>
                                 <div className="card-action">
                                     <a onClick={this.onHide.bind(this)} style={{cursor: 'pointer'}}>HIDE</a>
@@ -82,8 +84,9 @@ export class About extends React.Component {
                         <div className="s8 offset-s2 center-align">
                             <div className={"card deep-purple z-depth-2 " + (this.state.slide ? 'slide' : '') + (this.state.flip ? 'flip' : '')}>
                                 <div className="card-content white-text">
-                                    <span className="card-title">Awesome Animations!</span>
-                                    <p>CSS Animations are pretty cool. But combined with ReactJS ... &lt;3</p>
+                                    <span className="card-title">Jack James</span>
+                                    <p>New York ... </p><br/>
+                                    <p>Teacher...</p>
                                 </div>
                                 <div className="card-action">
                                     <a onClick={this.onFlip.bind(this)} style={{cursor: 'pointer'}}>FLIP</a>

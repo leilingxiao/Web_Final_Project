@@ -5,7 +5,7 @@ export class Todoitem extends Component {
     // arrow function
     getStyle = ()=>{
         return {
-            background: '#f4f4f4',
+            background: '#cfcfcf',
             padding: '10px',
             borderBottom: '1px #ccc dotted',
             textDecoration: this.props.todo.completed ? 'line-through':'none'
@@ -43,6 +43,8 @@ const btnStyle={
     float: 'right'
 
 }
+
+
 
 
 
