@@ -45,7 +45,7 @@ class App extends Component{
       },
       {
       id: uuid.v4(),
-      title :'Meeting with friends',
+      title :'Meet with friends',
       completed: false
       }
     ]

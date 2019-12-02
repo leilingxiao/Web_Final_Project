@@ -54,7 +54,7 @@ export class Contact extends React.Component {
                             <p>Click Item to Delete</p>
                             <ul className="collection">
                                 <ReactCSSTransitionGroup
-                                    transitionName="slide"
+                                    transitionName="flip"
                                     transitionEnterTimeout={300}
                                     transitionLeaveTimeout={300}>
                                     {this.state.items.map((item, i) => {

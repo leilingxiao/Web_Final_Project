@@ -84,7 +84,7 @@ export class About extends React.Component {
                         <div className="s8 offset-s2 center-align">
                             <div className={"card deep-purple z-depth-2 " + (this.state.slide ? 'slide' : '') + (this.state.flip ? 'flip' : '')}>
                                 <div className="card-content white-text">
-                                    <span className="card-title">Jack James</span>
+                                    <span className="card-title">Developer</span>
                                     <p>New York ... </p><br/>
                                     <p>Teacher...</p>
                                 </div>
