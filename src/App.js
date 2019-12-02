@@ -15,18 +15,6 @@ import uuid from 'uuid';
 import './App.css';
 
 
-const  particleOpt = {
-  particles:{
-    number:{
-      value: 150,
-      density:{
-        enbale :true,
-        value_area: 800
-      }
-    }
-  }
-}
-
 
 
 class App extends Component{
@@ -35,17 +23,17 @@ class App extends Component{
     todos: [
       {
       id: uuid.v4(),
-      title :'take out the trash',
+      title :'dig out the car',
+      completed: false
+      },
+      {
+      id: uuid.v4(),
+      title :'go to the class',
       completed: false
       },
       {
       id: uuid.v4(),
       title :'dinner with family',
-      completed: false
-      },
-      {
-      id: uuid.v4(),
-      title :'Meet with friends',
       completed: false
       }
     ]
